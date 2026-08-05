@@ -33,7 +33,7 @@ EXTEND_BTN = "button.extend-btn"
 START_BTN = "button.start-btn"
 START_VERIFY_DIALOG = "div.el-dialog"
 MANAGEMENT_MENU = '//li[contains(@class,"el-sub-menu")]//span[text()="Management"]'
-CONSOLE_MENU_ITEM = '//li[contains(@class,"el-menu-item")]//span[text()="Console"]'
+CONSOLE_MENU_ITEM = '//li[contains(@class,"el-menu-item")]//span[text()="Start / Stop"]'
 PAGE_READY_INDICATOR = '//li[contains(@class,"el-menu-item")]'
 
 
