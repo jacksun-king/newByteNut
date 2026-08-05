@@ -560,8 +560,8 @@ class BytenutRenewal:
                 self.log(f"Management 展开失败: {e}")
                 return False, "management_fail"
 
-        # Step 2: 点击 Console
-        self.log("🖥️ 点击 Console...")
+        # Step 2: 点击 Start / Stop
+        self.log("🖥️ 点击 Start / Stop...")
         try:
             sb.click(CONSOLE_MENU_ITEM)
             time.sleep(3)
@@ -570,7 +570,7 @@ class BytenutRenewal:
                 sb.execute_script("""
                     document.querySelectorAll('.el-menu-item span')
                     .forEach(function(el){
-                        if (el.textContent.trim() === 'Console')
+                        if (el.textContent.trim() === 'Start / Stop')
                             el.closest('.el-menu-item').click();
                     });
                 """)
@@ -581,7 +581,7 @@ class BytenutRenewal:
         # Step 3: 等待 Start 按钮
         try:
             sb.wait_for_element_present(START_BTN, timeout=15)
-            self.log("✅ Console 页面就绪")
+            self.log("✅ Start / Stop 页面就绪")
         except Exception as e:
             self.log(f"⚠️ 等待 Start 超时: {e}")
             self.shot(sb, f"no_start_btn_{idx}.png")
